@@ -1,4 +1,4 @@
-import { getServerData } from "../functions/fetchServerData";
+import { getServerData } from "../src/functions/fetchServerData";
 import { describe, expect, it } from "vitest";
 
 describe("getServerData", () => {
@@ -7,7 +7,7 @@ describe("getServerData", () => {
   });
 
   it("Should be a object response", () => {
-    expect(getServerData("centralcraft.blackpi.org")).toBeTypeOf("object");
+    expect(getServerData("play.blackpi.org")).toBeTypeOf("object");
   });
 
   it("Should throw if not a valid hostname", () => {
