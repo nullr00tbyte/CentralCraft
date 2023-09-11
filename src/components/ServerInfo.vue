@@ -1,7 +1,7 @@
 <template>
     <div v-if="!error" class="grid font-bold text-left text-base">
       
-        <p class="text-white">IP: centralcraft.blackpi.org</p>
+        <p class="text-white">IP: play.blackpi.org</p>
         <p class="text-white mt-2">PORT: 25565</p>
         <div class="flex items-center">
             <a href="https://www.minecraft.net/en-us/article/minecraft--java-edition-1-20-1"

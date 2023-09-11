@@ -1,4 +1,4 @@
-const SERVER_HOST = "centralcraft.blackpi.org"
+const SERVER_HOST = "play.blackpi.org"
 
 
 function getServerData(server: String) {
