@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import gondo from "../../public/gondo.svg";
+import { ViewTransitions } from "astro:transitions";
+---
+
+<ViewTransitions />
+<Layout title="CentralCraft - No Premium MC">
+  <section>
+    <div class="relative isolate ">
+      <div
+        class="absolute inset-x-0 -z-5 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        aria-hidden="true"
+      >
+        <div
+          class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#00bde5] to-[#f1889b] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+          style="clip-path: polygon(74.1% 44.1%, 100% 10.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 55.5%, 60.2% 62.4%, 52.4% 38.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+        >
+        </div>
+      </div>
+      <div class="mx-auto max-w-2xl py-40 sm:py-40 lg:py-40">
+        <div class="text-center">
+          <div class="flex items-center justify-center">
+            <img
+              style="height: auto; width: 400px;"
+              src={gondo.src}
+              class="drop-shadow-[-25px_-25px_60px_#f1889b]"
+              transition:name="img"
+            />
+          </div>
+
+          <div class="hero ">
+            <p class="text-4xl font-bold text-white mt-[50px] my-0">Josue Erubel Ramos (nullrootbyte)</p>
+            <p class="text-base font-bold text-white mx-0">
+              FullStack Developer - Server Owner
+            </p>
+            <p class="text-lg text-white mt-10">📧 nullrootbyte@gmail.com</p>
+            <p class="text-lg text-white mt-2">📱 +504 8732-5526</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

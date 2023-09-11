@@ -1,0 +1,74 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import { ViewTransitions } from "astro:transitions";
+
+import { type apiServerResponse, Players } from "../types/apiServerResponse";
+
+import { getServerData, SERVER_HOST } from "../functions/fetchServerData";
+import PlayerList from "../components/PlayerList.vue";
+import ServerInfo from "../components/ServerInfo.vue";
+
+const data = await getServerData(SERVER_HOST).then((response) => {
+  return response;
+}) as apiServerResponse;
+
+let htmldata = "";
+let version = "";
+let software = "";
+let players: Players;
+let playerslist = []
+let iserror = false
+try {
+  if (data.online) {
+    htmldata = data.motd.html[1];
+    version = data.version;
+    software = data.software;
+    players = data.players;
+    playerslist = players.list
+  }else{
+    iserror = true
+  }
+} catch (e) {
+  console.log(e);
+  iserror = true
+ 
+}
+---
+
+<ViewTransitions />
+<Layout title="CentralCraft - No Premium MC">
+  <section>
+    <div class="relative isolate">
+      <div
+        class="absolute inset-x-0 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        aria-hidden="true"
+      >
+        <div
+          class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#00bde5] to-[#f1889b] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+          style="clip-path: polygon(74.1% 44.1%, 100% 10.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 55.5%, 60.2% 62.4%, 52.4% 38.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+        >
+        </div>
+      </div>
+      <div class="mx-auto max-w-2xl py-40 sm:py-40 lg:py-40">
+        <div class="text-center">
+          <div class="grid grid-cols-2 gap-20 items-center">
+            <img
+              width="500px"
+              height="auto"
+              src="https://www.minecraft.net/content/dam/minecraft/community/floatinghouse.png.transform/minecraft-image-large/image.png"
+              class="mx-auto my-6 drop-shadow-[-25px_-25px_60px_#fff]"
+            />
+    
+            <ServerInfo version={version} software={software} error={iserror}  />
+      
+     
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <PlayerList players={playerslist} />
+  </section>
+</Layout>

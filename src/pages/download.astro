@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+import lux_wolf from "../../public/lux_wolf.gif";
+import { ViewTransitions } from "astro:transitions";
+import cube from "../cube.webp";
+import kindle from "../../public/kindletron2.gif";
+---
+
+<ViewTransitions />
+<Layout title="CentralCraft - No Premium MC">
+  <section>
+    <div
+      class=" absolute inset-x-0 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+      aria-hidden="true"
+      style="z-index: -1;"
+    >
+      <div
+        class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#00bde5] to-[#f1889b] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+        style="clip-path: polygon(74.1% 44.1%, 100% 10.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 55.5%, 60.2% 62.4%, 52.4% 38.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+      >
+      </div>
+    </div>
+    <div class="mx-auto max-w-2xl py-10 sm:py-10 lg:py-10">
+      <div class="text-center">
+        <div class="grid grid-cols-2 gap-20 items-center">
+          <img
+            style="height: auto; width: 200px;"
+            src={cube.src}
+            class="drop-shadow-[-25px_-25px_60px_#00bde5] my-10"
+            transition:name="imgTexture"
+          />
+
+          <div class="text-left text-2xl">
+            <p class="text-white font-bold">ResourcePack.zip</p>
+            <p class="text-white text-base mt-5">
+              ea9f98ea72887000c0ac58191d9da4317fe5c4c2
+            </p>
+            <a
+              href="https://download.mc-packs.net/pack/ea9f98ea72887000c0ac58191d9da4317fe5c4c2.zip"
+              type="button"
+              class="my-[25px] bg-white hover:bg-blue-100 text-black font-bold py-4 px-4 rounded-full"
+              >Download</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="grid grid-cols-2">
+      <img
+        class="drop-shadow-[25px_-25px_80px_#fff] rounded-r-full"
+        src={lux_wolf.src}
+        transition:name="lux"
+      />
+
+      <img
+        class="drop-shadow-[25px_-25px_80px_#fff] rounded-r-full"
+        src={kindle.src}
+      />
+    </div>
+  </section>
+</Layout>

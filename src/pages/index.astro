@@ -1,0 +1,146 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { ViewTransitions } from "astro:transitions";
+import lux_wolf from "../../public/lux_wolf.gif";
+import cube from "../cube.webp";
+import map from "../../public/map.webp";
+import texture from "../../public/texture.jpg";
+import gondo from "../../public/gondo.svg";
+---
+
+<ViewTransitions />
+<Layout title="CentralCraft - No Premium MC">
+  <section>
+    <div class="relative isolate">
+      <div
+        class="absolute inset-x-0 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        aria-hidden="true"
+      >
+        <div
+          class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#00bde5] to-[#f1889b] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+          style="clip-path: polygon(74.1% 44.1%, 100% 10.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 55.5%, 60.2% 62.4%, 52.4% 38.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+        >
+        </div>
+      </div>
+      <div class="mx-auto max-w-3xl py-35 sm:py-35 lg:py-35">
+        <div class="text-center">
+          <div class="grid grid-cols-2 gap-2 items-center">
+            <img
+              width="150px"
+              height="auto"
+              src={cube.src}
+              class="mx-auto my-6 drop-shadow-[-25px_-25px_60px_#000]"
+            />
+
+            <img
+              transition:name="img"
+              style="height: auto; width:150"
+              src={gondo.src}
+              class="mx-auto my-6 drop-shadow-[-25px_-25px_60px_#f1889b]"
+            />
+          </div>
+
+          <div class="hero my-10">
+            <h1 class="text-4xl font-bold text-white mt-20">
+              ¡¡Hola, jugador!! ¿Listo para unirte a la locura pixelada?
+            </h1>
+            <p class="text-lg text-white mt-5">
+              En nuestro servidor, los cerdos son chef, los pollos son espías y
+              los diamantes caen del cielo... ¡bueno, casi! 💎🐷🕵️
+            </p>
+            <a
+              href="/details"
+              type="button"
+              class="my-[100px] bg-[#00bde5] hover:bg-blue-600 text-white font-bold py-4 px-4 rounded-full inline-block"
+            >
+              ¡Conéctate ahora!
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-[#13151a] pt-200">
+    <div class="grid grid-cols-2 gap-2">
+      <div class="text-center">
+        <p class="font-bold text-4xl text-white">Nuevos Modelos!</p>
+        <p class="text-base text-white">Creados por la comunidad</p>
+        <img
+          transition:name="lux"
+          class="drop-shadow-[25px_-25px_80px_#fff] rounded-r-full my-5"
+          src={lux_wolf.src}
+        />
+      </div>
+      <div class="text-center text-white">
+        <div class="text-center flex items-center justify-center">
+          <img
+            style="height: auto; width: 100px;"
+            src={texture.src}
+            class="drop-shadow-[-25px_-25px_60px_#fff] my-10"
+            transition:name="imgTexture"
+          />
+        </div>
+        <p class="font-bold text-4xl text-white">Paquete de textura</p>
+        <p class="text-base text-white">
+          Descarga el paquete de texturas del servidor
+        </p>
+        <a
+          href="/download"
+          type="button"
+          class="my-[25px] bg-white hover:bg-blue-100 text-black font-bold py-4 px-4 rounded-full inline-block"
+        >
+          <div class="flex">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 mx-3"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+              ></path>
+            </svg>
+             Download
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="grid justify-center">
+      <img
+        style="height: auto; width: 200px;"
+        src={map.src}
+        class="drop-shadow-[-25px_-25px_60px_#fff] my-10"
+      />
+      <a
+        href="/map"
+        type="button"
+        class="my-[25px] bg-white hover:bg-blue-100 text-black font-bold py-4 px-4 rounded-full inline-block"
+      >
+        <div class="flex justify-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 mx-3"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"
+            ></path>
+          </svg>
+
+           Mapa
+        </div>
+      </a>
+    </div>
+  </section>
+</Layout>
