@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.0.0",
+    "@astrojs/vercel": "^4.0.5",
     "@astrojs/vue": "^3.0.0",
     "@headlessui/vue": "^1.7.16",
     "@heroicons/vue": "^2.0.18",
