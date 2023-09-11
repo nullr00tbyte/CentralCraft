@@ -16,11 +16,22 @@
         </a>
 
         <div class="hidden w-full md:block md:w-auto z-10" id="navbar-default">
+
+          
+
           <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-[#00bde5] dark:bg-white md:dark:bg-white dark:border-gray-700">
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700">
+                
+            <li>
+              <a href="https://paypal.me/blackpiorg?country.x=HN&locale.x=es_XC"
+                class="inline-block bg-white px-4 py-2 bg-white-500 text-black font-bold hover:shadow-[0_10px_15px_rgba(150,255,255,100)] rounded-lg shadow-md">
+                💳 Donar
+              </a>
+
+            </li>
             <li>
               <a href="/contact"
-                class="inline-block px-4 py-2 bg-white-500 text-black font-bold hover:shadow-[0_10px_15px_rgba(150,255,255,100)] rounded-lg shadow-md">
+                class="inline-block bg-white px-4 py-2 bg-white-500 text-black font-bold hover:shadow-[0_10px_15px_rgba(150,255,255,100)] rounded-lg shadow-md">
                 📱 Contacto
               </a>
 
