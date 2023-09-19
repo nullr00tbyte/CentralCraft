@@ -30,7 +30,7 @@ function getServerData(server: String) {
       // Aquí puedes manejar errores
       console.error("Hubo un error en la solicitud:", error);
       const json: apiServerResponse = {
-        ip: "18.117.165.167",
+        ip: "3.145.101.233",
         port: 25565,
         debug: {
           ping: true,
@@ -53,7 +53,7 @@ function getServerData(server: String) {
                 ttl: 300,
                 rdlength: 0,
                 rdata: "",
-                address: "18.117.165.167",
+                address: "3.145.101.233",
               },
             ],
           },
